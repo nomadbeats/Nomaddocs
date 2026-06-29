@@ -121,9 +121,9 @@ def load_config() -> Dict[str, Any]:
         logger.error(f"Failed to read config: {e}")
     
     default: Dict[str, Any] = {
-        "bot_token": os.getenv("BOT_TOKEN", "8736671676:AAHw92j_hH0nwbWaZpFG1cRIvPN-0MZbzm8"),
-        "payment_token": os.getenv("PAYMENT_TOKEN", "https://t.me/tribute/app?startapp=dMvV"),
-        "admin_ids": [int(x) for x in os.getenv("ADMIN_IDS", "6346043548").split(",") if x],
+        "bot_token": os.getenv("BOT_TOKEN", ""),
+        "payment_token": os.getenv("PAYMENT_TOKEN", ""),
+        "admin_ids": [int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x],
         "language": "en",
         "protect_content_default": False,
         "analytics_enabled": True,
